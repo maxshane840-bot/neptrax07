@@ -1,18 +1,16 @@
 import {
-  Sparkles,
-  Rocket,
-  ShoppingCart,
-  Briefcase,
-  Users,
-  Code,
-  Palette,
-  Search,
-  Target,
-  Layers,
-  Wrench,
-  TrendingUp,
-  ArrowUpRight
-} from 'lucide-react';
+  motion,
+  useScroll,
+  useTransform,
+  useInView,
+  useAnimation,
+  ScrollReveal,
+  StaggerContainer,
+  StaggerItem,
+  FadeIn,
+  ScaleIn,
+  useElementVisibility
+} from '../components/FramerMotion';
 import { motion, useScroll, useTransform, useInView, useAnimation } from 'framer-motion';
 import { useRef, useEffect, useState } from 'react';
 import Silk from '../components/Silk';
