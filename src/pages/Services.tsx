@@ -98,13 +98,14 @@ export default function Services({ onNavigate }: ServicesProps) {
   const servicesList = [
     {
       title: 'Custom Website Design',
-      description: 'Crafted pixel-perfect designs that reflect your brand identity. We create stunning, user-friendly websites that captivate visitors and convert them into loyal customers through strategic visual storytelling.',
+      description: 'Crafted pixel-perfect designs that reflect your brand identity. We create stunning, user-friendly websites that captivate visitors and convert them into loyal customers through strategic visual storytelling
+      icon: Code,
       gradient: 'from-cyan-500 via-blue-500 to-blue-600'
     },
     {
       title: 'Full-Stack Web Development',
       description: 'Building robust, scalable web applications with cutting-edge technologies. From front-end interfaces to back-end architecture, we deliver high-performance solutions that grow with your business needs.',
-      icon: Code,
+      i
       gradient: 'from-cyan-500 via-blue-500 to-blue-600'
     },
     {
