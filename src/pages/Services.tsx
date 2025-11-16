@@ -99,7 +99,6 @@ export default function Services({ onNavigate }: ServicesProps) {
     {
       title: 'Custom Website Design',
       description: 'Crafted pixel-perfect designs that reflect your brand identity. We create stunning, user-friendly websites that captivate visitors and convert them into loyal customers through strategic visual storytelling.',
-      icon: Code,
       gradient: 'from-cyan-500 via-blue-500 to-blue-600'
     },
     {
