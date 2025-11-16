@@ -139,7 +139,7 @@ export default function Services({ onNavigate }: ServicesProps) {
     {
       title: 'Mobile App Design & Development',
       description: 'Native and cross-platform mobile applications that deliver exceptional user experiences. We design and develop iOS and Android apps that are intuitive, fast, and aligned with your business objectives.',
-      icon: Smartphone,
+      img: Smartphone,
     },
     {
       title: 'Marketing Audit & Strategic Planning',
