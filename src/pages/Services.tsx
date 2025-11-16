@@ -105,67 +105,56 @@ export default function Services({ onNavigate }: ServicesProps) {
       title: 'Full-Stack Web Development',
       description: 'Building robust, scalable web applications with cutting-edge technologies. From front-end interfaces to back-end architecture, we deliver high-performance solutions that grow with your business needs.',
       icon: Code,
-      gradient: 'from-cyan-500 via-blue-500 to-blue-600'
     },
     {
       title: 'AI-Powered Chatbots',
       description: 'Intelligent conversational AI that engages customers 24/7. Our chatbots provide instant support, answer queries, and guide users through seamless experiences while learning from every interaction.',
       icon: Bot,
-      gradient: 'from-green-500 via-emerald-500 to-teal-500'
     },
     {
       title: 'Social Media Management & Growth',
       description: 'Strategic social media campaigns that build communities and drive engagement. We manage your presence across platforms, create compelling content, and grow your audience organically with data-driven strategies.',
       icon: Share2,
-      gradient: 'from-orange-500 via-red-500 to-pink-500'
     },
     {
       title: 'Brand Identity & Visual Design',
       description: 'Comprehensive brand development from concept to execution. We craft memorable logos, color palettes, and visual systems that establish strong brand recognition and communicate your unique value proposition.',
       icon: Layers,
-      gradient: 'from-blue-600 via-blue-500 to-cyan-500'
     },
     {
       title: 'Social Media & Digital Advertising',
       description: 'High-converting ad campaigns across Facebook, Instagram, LinkedIn, and Google. We optimize targeting, creative, and messaging to maximize ROI and deliver measurable results for your marketing investment.',
       icon: TrendingUp,
-      gradient: 'from-cyan-500 via-teal-500 to-green-500'
     },
     {
       title: 'SEO Optimization & Growth Strategy',
       description: 'Comprehensive SEO solutions that boost your search rankings and organic traffic. We implement technical optimizations, content strategies, and link-building campaigns that deliver sustainable growth and visibility.',
       icon: Search,
-      gradient: 'from-teal-500 via-cyan-500 to-blue-500'
     },
     {
       title: 'AI Automation Agents',
       description: 'Custom AI-powered automation that streamlines workflows and increases efficiency. From data processing to customer service, we build intelligent agents that handle repetitive tasks and free up your team.',
       icon: Zap,
-      gradient: 'from-blue-500 via-blue-600 to-blue-700'
     },
     {
       title: 'Mobile App Design & Development',
       description: 'Native and cross-platform mobile applications that deliver exceptional user experiences. We design and develop iOS and Android apps that are intuitive, fast, and aligned with your business objectives.',
       icon: Smartphone,
-      gradient: 'from-cyan-500 via-blue-500 to-blue-600'
     },
     {
       title: 'Marketing Audit & Strategic Planning',
       description: 'In-depth analysis of your marketing performance with actionable recommendations. We identify opportunities, optimize spending, and create comprehensive strategies that align with your business goals and budget.',
       icon: BarChart3,
-      gradient: 'from-green-500 via-teal-500 to-cyan-500'
     },
     {
       title: 'E-Commerce Store Development',
       description: 'Complete e-commerce solutions built for conversions and scalability. From product catalogs to secure checkout systems, we create online stores that provide seamless shopping experiences and drive revenue.',
       icon: ShoppingCart,
-      gradient: 'from-blue-500 via-cyan-500 to-teal-500'
     },
     {
       title: 'Content Creation & Copywriting',
       description: 'Compelling content that resonates with your audience and drives action. Our expert writers craft SEO-optimized blog posts, website copy, and marketing materials that establish authority and generate leads.',
       icon: PenTool,
-      gradient: 'from-orange-500 via-red-500 to-pink-500'
     }
   ];
 
