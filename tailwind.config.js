@@ -24,3 +24,40 @@ export default {
   },
   plugins: [],
 };
+
+// In your tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      animation: {
+        'gradient-x': 'gradient-x 3s ease infinite',
+        'shimmer': 'shimmer 8s ease-in-out infinite',
+        'float': 'float 6s ease-in-out infinite',
+        'pulse-slow': 'pulse 4s ease-in-out infinite',
+      },
+      keyframes: {
+        'gradient-x': {
+          '0%, 100%': {
+            'background-size': '200% 200%',
+            'background-position': 'left center'
+          },
+          '50%': {
+            'background-size': '200% 200%',
+            'background-position': 'right center'
+          },
+        },
+        'shimmer': {
+          '0%, 100%': { transform: 'skewY(12deg) translateX(-100%)' },
+          '50%': { transform: 'skewY(12deg) translateX(100%)' },
+        },
+        'float': {
+          '0%, 100%': { transform: 'translateY(0px) scale(1)' },
+          '50%': { transform: 'translateY(-20px) scale(1.1)' },
+        },
+      },
+      backgroundSize: {
+        '200%': '200% 200%',
+      }
+    },
+  },
+}
