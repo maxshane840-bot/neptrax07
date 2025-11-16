@@ -321,7 +321,7 @@ export default function Services({ onNavigate }: ServicesProps) {
               {/* Soft glow background */}
               <div className="absolute -inset-8 bg-gradient-radial from-[#061e28]/22 via-transparent to-transparent rounded-full blur-3xl opacity-60 mix-blend-screen pointer-events-none"></div>
 
-              <h2 className="display-hero text-4xl md:text-7xl lg:text-8xl xl:text-9xl font-black text-white leading-[0.98] tracking-tight">
+              <h2 className="display-hero text-2xl md:text-7xl lg:text-8xl xl:text-9xl font-black text-white leading-[0.98] tracking-tight">
                 Simplify operations.<br />
                 Accelerate results.<br />
                 Reclaim your time for what<br />
