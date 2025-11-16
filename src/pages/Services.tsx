@@ -105,7 +105,7 @@ export default function Services({ onNavigate }: ServicesProps) {
     {
       title: 'Full-Stack Web Development',
       description: 'Building robust, scalable web applications with cutting-edge technologies. From front-end interfaces to back-end architecture, we deliver high-performance solutions that grow with your business needs.',
-      i
+      icon: Code,
       gradient: 'from-cyan-500 via-blue-500 to-blue-600'
     },
     {
