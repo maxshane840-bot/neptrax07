@@ -315,46 +315,23 @@ export default function Services({ onNavigate }: ServicesProps) {
             </div>
           </div>
 
-{/* Second Row - Large Typographic Hero */}
-<div className="reveal-up mb-32">
-  <div className="relative max-w-5xl">
-    {/* Enhanced glow backgrounds */}
-    <div className="absolute -inset-8 bg-gradient-radial from-[#00ffea]/15 via-transparent to-transparent rounded-full blur-3xl opacity-70 mix-blend-screen pointer-events-none animate-pulse-slow"></div>
-    <div className="absolute -inset-12 bg-gradient-radial from-[#ff00aa]/10 via-transparent to-transparent rounded-full blur-4xl opacity-50 mix-blend-screen pointer-events-none"></div>
-    
-    {/* Animated gradient overlay */}
-    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/5 to-transparent skew-y-12 animate-shimmer pointer-events-none"></div>
+          {/* Second Row - Large Typographic Hero */}
+          <div className="reveal-up mb-32">
+            <div className="relative max-w-5xl">
+              {/* Soft glow background */}
+              <div className="absolute -inset-8 bg-gradient-radial from-[#061e28]/22 via-transparent to-transparent rounded-full blur-3xl opacity-60 mix-blend-screen pointer-events-none"></div>
 
-    <h2 className="display-hero text-7xl md:text-7xl lg:text-7xl xl:text-6xl font-black leading-[0.98] tracking-tight">
-      {/* Gradient text with animation */}
-      <span className="bg-gradient-to-r from-white via-cyan-200 to-blue-300 bg-clip-text text-transparent animate-gradient-x">
-        Simplify operations.<br />
-      </span>
-      <span className="bg-gradient-to-r from-white via-purple-200 to-pink-300 bg-clip-text text-transparent animate-gradient-x [animation-delay:0.5s]">
-        Accelerate results.<br />
-      </span>
-      <span className="bg-gradient-to-r from-white via-amber-200 to-orange-300 bg-clip-text text-transparent animate-gradient-x [animation-delay:1s]">
-        Reclaim your time for what<br />
-      </span>
-      <span className="bg-gradient-to-r from-white via-emerald-200 to-green-300 bg-clip-text text-transparent animate-gradient-x [animation-delay:1.5s]">
-        truly grows your business.<br />
-      </span>
-      <span className="bg-gradient-to-r from-white via-sky-200 to-blue-300 bg-clip-text text-transparent animate-gradient-x [animation-delay:2s]">
-        From no-code agility to custom<br />
-      </span>
-      <span className="bg-gradient-to-r from-white via-violet-200 to-purple-300 bg-clip-text text-transparent animate-gradient-x [animation-delay:2.5s]">
-        development, we make workflows<br />
-      </span>
-      <span className="bg-gradient-to-r from-white via-rose-200 to-red-300 bg-clip-text text-transparent animate-gradient-x [animation-delay:3s]">
-        effortless and impactful.
-      </span>
-    </h2>
-
-    {/* Floating particles effect */}
-    <div className="absolute -top-20 -left-20 w-40 h-40 bg-cyan-400/20 rounded-full blur-xl animate-float pointer-events-none"></div>
-    <div className="absolute -bottom-20 -right-20 w-60 h-60 bg-purple-400/15 rounded-full blur-xl animate-float [animation-delay:2s] pointer-events-none"></div>
-  </div>
-</div>
+              <h2 className="display-hero text-7xl md:text-7xl lg:text-7xl xl:text-6xl font-black text-white leading-[0.98] tracking-tight">
+                Simplify operations.<br />
+                Accelerate results.<br />
+                Reclaim your time for what<br />
+                truly grows your business.<br />
+                From no-code agility to custom<br />
+                development, we make workflows<br />
+                effortless and impactful.
+              </h2>
+            </div>
+          </div>
 
           {/* Third Row - Newly Added */}
           <div className="reveal-up">
