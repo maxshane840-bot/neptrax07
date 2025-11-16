@@ -361,9 +361,9 @@ export default function Services({ onNavigate }: ServicesProps) {
               <div className="services-visual">
                 <div className="relative">
                   <img
-                    src="/demo.png"
+                    src="public/portfolio/wildebrands.png"
                     alt="AI Chatbot demo"
-                    className="w-full h-auto rounded-3xl border-2 border-[#141414] shadow-[0_20px_60px_rgba(0,0,0,0.5)] object-cover transition-transform duration-500"
+                    className="w-full h-[500px] rounded-3xl border-2 border-[#141414] shadow-[0_20px_60px_rgba(0,0,0,0.5)] object-cover transition-transform duration-500"
                   />
                 </div>
               </div>
