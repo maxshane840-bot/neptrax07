@@ -48,6 +48,53 @@ export default function Services({ onNavigate }: ServicesProps) {
     return () => observer.disconnect();
   }, []);
 
+  // Reveal on scroll for showcase section
+  useEffect(() => {
+    const revealElements = document.querySelectorAll('.reveal-up');
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    revealElements.forEach((el) => revealObserver.observe(el));
+
+    return () => revealObserver.disconnect();
+  }, []);
+
+  // Image tilt effect
+  useEffect(() => {
+    const images = document.querySelectorAll('.services-visual img');
+
+    images.forEach((img) => {
+      const handleMouseMove = (ev: MouseEvent) => {
+        const target = ev.currentTarget as HTMLElement;
+        const r = target.getBoundingClientRect();
+        const x = (ev.clientX - r.left) / r.width - 0.5;
+        const y = (ev.clientY - r.top) / r.height - 0.5;
+        target.style.transform = `perspective(900px) rotateX(${y * 6}deg) rotateY(${x * -6}deg) scale(1.02)`;
+      };
+
+      const handleMouseLeave = (ev: MouseEvent) => {
+        const target = ev.currentTarget as HTMLElement;
+        target.style.transform = '';
+      };
+
+      img.addEventListener('mousemove', handleMouseMove as EventListener);
+      img.addEventListener('mouseleave', handleMouseLeave as EventListener);
+
+      return () => {
+        img.removeEventListener('mousemove', handleMouseMove as EventListener);
+        img.removeEventListener('mouseleave', handleMouseLeave as EventListener);
+      };
+    });
+  }, []);
+
   const servicesList = [
     {
       title: 'Custom Website Design',
@@ -228,6 +275,103 @@ export default function Services({ onNavigate }: ServicesProps) {
         </div>
       </section>
 
+      {/* Services Showcase Section */}
+      <section id="services-showcase-2" aria-label="Services showcase" className="relative bg-[#0b0b0b] py-[120px]">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+          {/* First Row - Featured Service */}
+          <div className="reveal-up mb-32">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              {/* Left Column - Text */}
+              <div className="order-2 lg:order-1">
+                <div className="badge-pill inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#222222] text-[#d7d7d7] text-xs uppercase tracking-wider mb-6">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#00c2b3]"></span>
+                  Featured Service
+                </div>
+                <h2 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight">
+                  Website Development
+                </h2>
+                <p className="text-lg md:text-xl text-[#bdbdbd] mb-8 leading-relaxed">
+                  Developing digital experiences that are as beautiful as they are functional.
+                </p>
+                <button
+                  className="cta-outline group inline-flex items-center gap-2 px-7 py-3.5 rounded-full border-[1.5px] border-white/12 text-white transition-all duration-300 hover:bg-white/95 hover:text-[#0b0b0b] hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.6)] focus:outline-none focus:ring-2 focus:ring-[#00c2b3] focus:ring-offset-4 focus:ring-offset-[#0b0b0b]"
+                  onClick={() => onNavigate('portfolio')}
+                >
+                  <span>Explore Projects</span>
+                  <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
+                </button>
+              </div>
+
+              {/* Right Column - Visual */}
+              <div className="services-visual order-1 lg:order-2">
+                <div className="relative">
+                  <img
+                    src="/jeton.png"
+                    alt="Website development demo"
+                    className="w-full h-auto rounded-3xl border-2 border-[#141414] shadow-[0_20px_60px_rgba(0,0,0,0.5)] object-cover transition-transform duration-500"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Second Row - Large Typographic Hero */}
+          <div className="reveal-up mb-32">
+            <div className="relative max-w-5xl">
+              {/* Soft glow background */}
+              <div className="absolute -inset-8 bg-gradient-radial from-[#061e28]/22 via-transparent to-transparent rounded-full blur-3xl opacity-60 mix-blend-screen pointer-events-none"></div>
+
+              <h2 className="display-hero text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black text-white leading-[0.98] tracking-tight">
+                Simplify operations.<br />
+                Accelerate results.<br />
+                Reclaim your time for what<br />
+                truly grows your business.<br />
+                From no-code agility to custom<br />
+                development, we make workflows<br />
+                effortless and impactful.
+              </h2>
+            </div>
+          </div>
+
+          {/* Third Row - Newly Added */}
+          <div className="reveal-up">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              {/* Left Column - Text */}
+              <div>
+                <div className="badge-pill inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#222222] text-[#d7d7d7] text-xs uppercase tracking-wider mb-6">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#00c2b3]"></span>
+                  Newly Added
+                </div>
+                <h2 className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight">
+                  AI Chatbots Development
+                </h2>
+                <p className="text-lg md:text-xl text-[#bdbdbd] mb-8 leading-relaxed">
+                  Your Dedicated AI Support Bot, Built Just for Coaches
+                </p>
+                <button
+                  className="cta-outline group inline-flex items-center gap-2 px-7 py-3.5 rounded-full border-[1.5px] border-white/12 text-white transition-all duration-300 hover:bg-white/95 hover:text-[#0b0b0b] hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.6)] focus:outline-none focus:ring-2 focus:ring-[#00c2b3] focus:ring-offset-4 focus:ring-offset-[#0b0b0b]"
+                  onClick={() => onNavigate('portfolio')}
+                >
+                  <span>Explore Projects</span>
+                  <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
+                </button>
+              </div>
+
+              {/* Right Column - Visual */}
+              <div className="services-visual">
+                <div className="relative">
+                  <img
+                    src="/demo.png"
+                    alt="AI Chatbot demo"
+                    className="w-full h-auto rounded-3xl border-2 border-[#141414] shadow-[0_20px_60px_rgba(0,0,0,0.5)] object-cover transition-transform duration-500"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Modern Animation Styles */}
       <style jsx>{`
         @keyframes glow-text {
@@ -277,15 +421,83 @@ export default function Services({ onNavigate }: ServicesProps) {
           overflow: hidden;
         }
 
+        /* Reveal animations for showcase section */
+        .reveal-up {
+          opacity: 0;
+          transform: translateY(18px);
+          transition: transform 0.7s cubic-bezier(0.2, 0.9, 0.2, 1), opacity 0.6s;
+        }
+
+        .reveal-up.in-view {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .reveal-up {
+            transform: none;
+            opacity: 1;
+            transition: none;
+          }
+        }
+
+        /* Badge styles */
+        .badge-pill {
+          font-weight: 600;
+          letter-spacing: 0.05em;
+        }
+
+        /* Display hero typography */
+        .display-hero {
+          word-break: keep-all;
+        }
+
+        /* Radial gradient utility */
+        .bg-gradient-radial {
+          background: radial-gradient(ellipse at center, var(--tw-gradient-stops));
+        }
+
+        /* Services visual hover effects */
+        .services-visual img {
+          cursor: pointer;
+          transition: transform 0.45s cubic-bezier(0.2, 0.9, 0.2, 1);
+        }
+
         @media (max-width: 1024px) {
           .grid {
             grid-template-columns: repeat(2, 1fr);
+          }
+
+          .display-hero {
+            font-size: 3rem;
+            line-height: 1.1;
           }
         }
 
         @media (max-width: 640px) {
           .grid {
             grid-template-columns: repeat(1, 1fr);
+          }
+
+          .display-hero {
+            font-size: 2rem;
+            line-height: 1.15;
+            text-align: center;
+          }
+
+          #services-showcase-2 {
+            padding: 60px 0;
+          }
+
+          .reveal-up {
+            margin-bottom: 60px !important;
+          }
+        }
+
+        /* Mobile order fixes */
+        @media (max-width: 1023px) {
+          .services-visual {
+            margin-bottom: 2rem;
           }
         }
       `}</style>
